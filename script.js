@@ -5,7 +5,7 @@ function checkNumber() {
     const imageSource = document.getElementById('imageSource');
 
     if (creditCardNumber === 'ZWEIVIERDREIACHT') {
-        message.innerHTML = 'Du bist Opfer meiner Phishing-Attacke geworden! <br> Ich kenne jetzt Karls Kreditkartennummer.';
+        message.innerHTML = <strong>'Du bist Opfer meiner Phishing-Attacke geworden! <br> Ich kenne jetzt Karls Kreditkartennummer.'</strong>;
         message.style.fontSize = '1.5em'; // Textgrösse anpassen
         phishingImage.style.display = 'block'; // Bild anzeigen
         imageSource.style.display = 'block'; // Bildquelle anzeigen

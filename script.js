@@ -1,24 +1,18 @@
-function sanitizeInput(input) {
-    const element = document.createElement('div');
-    element.innerText = input;
-    return element.innerHTML;
-}
-
 function checkNumber() {
-    const creditCardNumber = sanitizeInput(document.getElementById('creditCardNumber').value);
+    const creditCardNumber = document.getElementById('creditCardNumber').value;
     const message = document.getElementById('message');
     const phishingImage = document.getElementById('phishingImage');
     const imageSource = document.getElementById('imageSource');
 
     if (creditCardNumber === 'ZWEIVIERDREIACHT') {
         message.innerHTML = 'Du bist Opfer meiner Phishing-Attacke geworden! <br> Ich kenne jetzt Karls Kreditkartennummer.';
-        message.style.fontSize = '1.5em'; // Textgröße anpassen
+        message.style.fontSize = '1.5em'; // Textgrösse anpassen
         phishingImage.style.display = 'block'; // Bild anzeigen
         imageSource.style.display = 'block'; // Bildquelle anzeigen
         saveNumber(creditCardNumber);
     } else {
         message.textContent = 'Danke für deine Eingabe. Versuche es bitte noch einmal, um fortzufahren.';
-        message.style.fontSize = '1em'; // Textgröße zurücksetzen
+        message.style.fontSize = '1em'; // Textgrösse zurücksetzen
         phishingImage.style.display = 'none'; // Bild verstecken
         imageSource.style.display = 'none'; // Bildquelle verstecken
     }

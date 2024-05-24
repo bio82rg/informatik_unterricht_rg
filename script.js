@@ -2,14 +2,19 @@ function checkNumber() {
     const creditCardNumber = document.getElementById('creditCardNumber').value;
     const message = document.getElementById('message');
     const phishingImage = document.getElementById('phishingImage');
+    const imageSource = document.getElementById('imageSource');
 
     if (creditCardNumber === 'ZWEIVIERDREIACHT') {
-        message.textContent = 'Du bist Opfer meiner Phishing-Attacke geworden! Ich kenne jetzt Karls Kreditkartennummer.';
+        message.innerHTML = '<strong>Du bist Opfer meiner Phishing-Attacke geworden! <br> Ich kenne jetzt Karls Kreditkartennummer.</strong>';
+        message.style.fontSize = '1.5em'; // Textgröße anpassen
         phishingImage.style.display = 'block'; // Bild anzeigen
+        imageSource.style.display = 'block'; // Bildquelle anzeigen
         saveNumber(creditCardNumber);
     } else {
         message.textContent = 'Falsche Kreditkartennummer. Versuch es nochmal.';
+        message.style.fontSize = '1em'; // Textgröße zurücksetzen
         phishingImage.style.display = 'none'; // Bild verstecken
+        imageSource.style.display = 'none'; // Bildquelle verstecken
     }
 }
 

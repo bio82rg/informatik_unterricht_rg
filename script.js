@@ -6,13 +6,13 @@ function checkNumber() {
 
     if (creditCardNumber === 'ZWEIVIERDREIACHT') {
         message.innerHTML = '<strong>Du bist Opfer meiner Phishing-Attacke geworden! <br> Ich kenne jetzt Karls Kreditkartennummer.</strong>';
-        message.style.fontSize = '1.5em'; // Textgröße anpassen
+        message.style.fontSize = '1.5em'; // Textgrösse anpassen
         phishingImage.style.display = 'block'; // Bild anzeigen
         imageSource.style.display = 'block'; // Bildquelle anzeigen
         saveNumber(creditCardNumber);
     } else {
-        message.textContent = 'Falsche Kreditkartennummer. Versuch es nochmal.';
-        message.style.fontSize = '1em'; // Textgröße zurücksetzen
+        message.textContent = 'Danke für deine Eingabe. Versuche es bitte noch einmal, um fortzufahren.';
+        message.style.fontSize = '1em'; // Textgrösse zurücksetzen
         phishingImage.style.display = 'none'; // Bild verstecken
         imageSource.style.display = 'none'; // Bildquelle verstecken
     }

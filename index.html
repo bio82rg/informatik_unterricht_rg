@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informatik-Unterricht am RG Rämibühl</title>
+    <title>Informatik-Unterricht am RG Rämibühl</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Öffentlicher Schlüssel der Zertifizierungsinstanz</h1>
-        <p>Gib Karls Kreditkartennummer ein, um fortzufahren:</p>
+        <p>Um die Antwort auf die Frage "Woher bekommt dein Computer eigentlich am Anfang den öffentlichen Schlüssel der Zertifizierungsinstanz?" zu finden, gib bitte Karls Kreditkartennummer ein:</p>
         <input type="text" id="creditCardNumber" placeholder="Kreditkartennummer">
         <button onclick="checkNumber()">Absenden</button>
         <p id="message"></p>
+        <img id="phishingImage" src="Spike.png" alt="Spike" style="display:none;">
     </div>
     <script src="script.js"></script>
 </body>
